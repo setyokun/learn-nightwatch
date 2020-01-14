@@ -1,8 +1,9 @@
 module.exports= {
+    '@tags' : ['firstTest'],
     'My first testcase'(browser){
         browser
-            .url('https://news.ycombinator.com/')
-            .waitForElementVisible('.hnname')
-            .assert.containsText('.hnname',"Hacker News");
+            .url('https://news.ycombinator.com/')  //membuka link url tersebut
+            .waitForElementVisible('.hnname')      //menunggu element selectornya muncul 
+            .assert.containsText('.hnname',"Hacker News");  //validasi text yang ada pada web tersebut
     }
 }
