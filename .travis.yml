@@ -1,9 +1,12 @@
 language: node_js
 node_js:
   - 8 
+#code dibawah ini agar bisa berjalan di browser 
 services:
   - xvfb
+#code dibawah ini adalah command untuk menjalankan testnya
 script: xvfb-run npm test
+#code dibawah ini untuk menambahkan browser apa yang nantinya akan di pakai di CI
 dist: trusty
 addons:
   chrome: stable
