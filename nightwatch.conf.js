@@ -10,15 +10,21 @@ module.exports = {
 
   "test_settings" : {
     "default" : {
+      "screenshot" : {
+        "enabled" : true,
+        "on_failure" : true,
+        "on_error" : true,
+        "path" : "tests_output/screenshot"
+      },
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "args": ["--lang=en-GB"], //agar bahasa pada chromerdriver berubah menjadi bahasa inggris
-          "prefs": {
-            "intl": {
-              "accept_languages": "en-GB"
-            }
-          }          
+          // "args": ["--headless"], //agar bahasa pada chromerdriver berubah menjadi bahasa inggris
+          // "prefs": {
+          //   "intl": {
+          //     "accept_languages": "en-GB"
+          //   }
+          // }          
         }
         
       }

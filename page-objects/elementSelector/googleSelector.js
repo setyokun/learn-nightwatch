@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'https://www.google.com/advanced_search',
+    url: 'https://www.google.com/advanced_search?hl=en',
     elements: {
          //code dibawah ini adalah element selector
         selectorWords : '[name="as_q"]',

@@ -1,5 +1,6 @@
 module.exports = {
     '@tags' : ['google'],       //ini adalah syntax agar saat run test bisa spesific ke suatu testnya 
+    '@disabled' : false,
     'Search in Google Advance: Elon Musk'(browser) {
         const words = 'Elon Musk';
         //memanggil page-objectnpom
