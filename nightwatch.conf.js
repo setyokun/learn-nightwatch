@@ -1,5 +1,6 @@
 module.exports = {
   "src_folders" : ["tests"], //folder yang digunakan untuk acuan test
+  "page_objects_path" : ["page-objects"], //folder yang digunakan untuk page-object di load
 
   "webdriver" : {
     "start_process": true,
