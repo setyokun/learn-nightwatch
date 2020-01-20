@@ -19,7 +19,7 @@ module.exports = {
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          // "args": ["--headless"], //agar bahasa pada chromerdriver berubah menjadi bahasa inggris
+          "args": ["--headless"], //agar bahasa pada chromerdriver berubah menjadi bahasa inggris
           // "prefs": {
           //   "intl": {
           //     "accept_languages": "en-GB"
