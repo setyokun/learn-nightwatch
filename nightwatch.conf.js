@@ -14,12 +14,12 @@ module.exports = {
         "enabled" : true,
         "on_failure" : true,
         "on_error" : true,
-        "path" : "tests_output/screenshot"
+        "path" : "tests_output"
       },
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "args": ["--headless"], //agar bahasa pada chromerdriver berubah menjadi bahasa inggris
+          // "args": ["--headless"], //--headless : agar ketika script test di run tidak muncul browsernya 
           // "prefs": {
           //   "intl": {
           //     "accept_languages": "en-GB"
