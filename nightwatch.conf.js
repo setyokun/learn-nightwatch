@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   "src_folders" : ["tests"], //folder yang digunakan untuk acuan test
   "page_objects_path" : ["page-objects"], //folder yang digunakan untuk page-object di load
@@ -19,15 +21,9 @@ module.exports = {
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          // "args": ["--headless"], //--headless : agar ketika script test di run tidak muncul browsernya 
-          // "prefs": {
-          //   "intl": {
-          //     "accept_languages": "en-GB"
-          //   }
-          // }          
+          // "args": ["--headless"], //--headless : agar ketika script test di run tidak muncul browsernya          
         }
-        
       }
-    }
+    },
   }
 }
