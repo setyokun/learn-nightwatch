@@ -5,7 +5,7 @@ node_js:
 services:
   - xvfb
 #code dibawah ini adalah command untuk menjalankan testnya
-script: xvfb-run npm test
+script: xvfb-run npm run test:cucumber
 #code dibawah ini untuk menambahkan browser apa yang nantinya akan di pakai di CI
 dist: trusty
 addons:
