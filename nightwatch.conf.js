@@ -12,7 +12,7 @@ module.exports = {
 
   "test_settings" : {
     "default" : {
-      "screenshot" : {
+      "screenshots" : {
         "enabled" : true,
         "on_failure" : true,
         "on_error" : true,

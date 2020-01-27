@@ -14,8 +14,8 @@ module.exports = {
             .assert.urlContains('as_qdr=w','Params Last Update :  Week')
             .assert.visible('@UISearchValue','UI : Elon Musk is set in Search Form')
             .assert.containsText('@UILanguage',"Search Italian pages",'UI : Language is Italian')
-            .assert.containsText('@UILastUpdate','Past week','UI : Last Update in Week')
-            .saveScreenshot('tests_output/google.png');
+            .assert.containsText('@UILastUpdate','Past week','UI : Last Update in Week');
+            // .saveScreenshot('tests_output/google.png');
         }     
     }]
 }; 
