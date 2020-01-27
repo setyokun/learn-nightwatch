@@ -1,6 +1,7 @@
 const { client } = require('nightwatch-api');
 const { Given, Then, When } = require('cucumber');
 
+//load page-object yang dibuar di folder page-object 
 const steps = client.page.elementSelector.googleSelector();
 const validator = client.page.elementValidator.googleValidator();
 

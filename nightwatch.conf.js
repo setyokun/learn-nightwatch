@@ -14,8 +14,6 @@ module.exports = {
     "default" : {
       "screenshots" : {
         "enabled" : true,
-        "on_failure" : true,
-        "on_error" : true,
         "path" : "tests_output"
       },
       "desiredCapabilities": {

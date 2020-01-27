@@ -3,11 +3,11 @@ const { Given, Then, When } = require('cucumber');
 
 
 Given(/^I open hacker news page$/, () => {
-    return client.url('https://news.ycombinator.com/'); 
+    return client.url('https://news.ycombinator.com/');
 });
 
 When(/^I validate Content$/, () => {
-    return client.waitForElementVisible('.hnname');     
+    return client.waitForElementVisible('.hnname');
 });
 
 Then(/^Success to validate$/,  () => {

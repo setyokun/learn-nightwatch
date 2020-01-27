@@ -1,5 +1,6 @@
 Feature: Google Advanced Search 
 
+@google
 Scenario: Validate content in google advanced search
 
   Given I open google advanced search page
