@@ -6,7 +6,8 @@
   "scripts": {
     "test": "nightwatch",
     "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
-    "test:cucumber": "mkdirp report && cucumber-js --require cucumber.conf.js --require steps-definition --format node_modules/cucumber-pretty --format json:report/cucumber_report.json"
+    "test:cucumber": "mkdirp report && cucumber-js --require cucumber.conf.js --require steps-definition --format node_modules/cucumber-pretty --format json:report/cucumber_report.json",
+    "test:withoutCucumberReport": "cucumber-js --require cucumber.conf.js --require steps-definition --format node_modules/cucumber-pretty"
   },
   "keywords": [],
   "author": "",

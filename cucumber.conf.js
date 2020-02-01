@@ -1,25 +1,27 @@
 
 const fs = require('fs');
-const { setDefaultTimeout, After, AfterAll, BeforeAll } = require('cucumber');
+const {
+  setDefaultTimeout, After, AfterAll, BeforeAll,
+} = require('cucumber');
 const {
   createSession,
   closeSession,
   startWebDriver,
   stopWebDriver,
-  getNewScreenshots
+  getNewScreenshots,
 } = require('nightwatch-api');
 const reporter = require('cucumber-html-reporter');
 
-//cucumber menset timeout 60 detik
+// cucumber menset timeout 60 detik
 setDefaultTimeout(60000);
 
-//sebelum menjalankan testnya , cucumber terlebih dahulu menjalankan web driver dan kemudian membuat session 
+// sebelum menjalankan testnya , cucumber terlebih dahulu menjalankan web driver dan kemudian membuat session
 BeforeAll(async () => {
-  await startWebDriver({ env: process.env.NIGHTWATCH_ENV });
+  await startWebDriver();
   await createSession();
 });
- 
-//setelah testnya selesai, cucumber akan menutup session yang tadi dibuat dan memberhentikan/stop web driver, kemudian langsung load report
+
+// setelah testnya selesai, cucumber akan menutup session yang tadi dibuat dan memberhentikan/stop web driver, kemudian langsung load report
 AfterAll(async () => {
   await closeSession();
   await stopWebDriver();
@@ -32,13 +34,13 @@ AfterAll(async () => {
       launchReport: true,
       metadata: {
         'App Version': '1.0.0',
-        'Test Environment': 'Google Production'
-      }
+        'Test Environment': 'Google Production',
+      },
     });
   }, 1000);
 });
 
-//untuk create screenshot baru ketika test dijalankan
-After(function() {
-  getNewScreenshots().forEach(file => this.attach(fs.readFileSync(file), 'image/png'));
+// untuk create screenshot baru ketika test dijalankan
+After(function () {
+  getNewScreenshots().forEach((file) => this.attach(fs.readFileSync(file), 'image/png'));
 });
